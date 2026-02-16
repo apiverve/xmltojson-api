@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/xmltojson",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "XML to JSON is a simple tool for converting XML to JSON. It returns the JSON representation of the XML provided.",
   "main": "index.js",
   "types": "index.d.ts",
