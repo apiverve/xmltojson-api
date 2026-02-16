@@ -26,7 +26,7 @@ Add the dependency:
 
 ```gradle
 dependencies {
-    implementation 'com.github.apiverve:xmltojson-api:1.1.13'
+    implementation 'com.github.apiverve:xmltojson-api:1.1.14'
 }
 ```
 
@@ -47,7 +47,13 @@ XMLtoJSONAPIClient client = new XMLtoJSONAPIClient("YOUR_API_KEY");
 try {
     // Prepare request parameters
     Map<String, Object> parameters = new HashMap<>();
-    parameters.put("xml", "");
+    parameters.put("xml", "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<note>
+  <to>Tove</to>
+  <from>Jani</from>
+  <heading>Reminder</heading>
+  <body>Don't forget me this weekend!</body>
+</note>");
 
     // Execute the request
     APIResponse response = client.execute(parameters);
