@@ -44,7 +44,13 @@ from apiverve_xmltojson.apiClient import XmltojsonAPIClient
 # Initialize the client with your APIVerve API key
 api = XmltojsonAPIClient("[YOUR_API_KEY]")
 
-query = { "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<note>\n <to>Tove</to>\n <from>Jani</from>\n <heading>Reminder</heading>\n <body>Don't forget me this weekend!</body>\n</note>" }
+query = { "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<note>
+  <to>Tove</to>
+  <from>Jani</from>
+  <heading>Reminder</heading>
+  <body>Don't forget me this weekend!</body>
+</note>" }
 
 try:
     # Make the API call
@@ -82,7 +88,13 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<note>\n <to>Tove</to>\n <from>Jani</from>\n <heading>Reminder</heading>\n <body>Don't forget me this weekend!</body>\n</note>" }
+query = { "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<note>
+  <to>Tove</to>
+  <from>Jani</from>
+  <heading>Reminder</heading>
+  <body>Don't forget me this weekend!</body>
+</note>" }
 ```
 
 ###### Simple Request
@@ -143,7 +155,13 @@ from apiverve_xmltojson.apiClient import XmltojsonAPIClient, XmltojsonAPIClientE
 
 api = XmltojsonAPIClient("[YOUR_API_KEY]")
 
-query = { "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<note>\n <to>Tove</to>\n <from>Jani</from>\n <heading>Reminder</heading>\n <body>Don't forget me this weekend!</body>\n</note>" }
+query = { "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<note>
+  <to>Tove</to>
+  <from>Jani</from>
+  <heading>Reminder</heading>
+  <body>Don't forget me this weekend!</body>
+</note>" }
 
 try:
     result = api.execute(query)
@@ -164,7 +182,13 @@ from apiverve_xmltojson.apiClient import XmltojsonAPIClient, XmltojsonAPIClientE
 
 api = XmltojsonAPIClient("[YOUR_API_KEY]")
 
-query = { "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<note>\n <to>Tove</to>\n <from>Jani</from>\n <heading>Reminder</heading>\n <body>Don't forget me this weekend!</body>\n</note>" }
+query = { "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<note>
+  <to>Tove</to>
+  <from>Jani</from>
+  <heading>Reminder</heading>
+  <body>Don't forget me this weekend!</body>
+</note>" }
 
 try:
     result = api.execute(query)
@@ -198,7 +222,13 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_xmltojson.apiClient import XmltojsonAPIClient, XmltojsonAPIClientError
 
-query = { "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<note>\n <to>Tove</to>\n <from>Jani</from>\n <heading>Reminder</heading>\n <body>Don't forget me this weekend!</body>\n</note>" }
+query = { "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<note>
+  <to>Tove</to>
+  <from>Jani</from>
+  <heading>Reminder</heading>
+  <body>Don't forget me this weekend!</body>
+</note>" }
 
 # Using context manager ensures proper cleanup
 with XmltojsonAPIClient("[YOUR_API_KEY]") as api:
@@ -224,7 +254,13 @@ from apiverve_xmltojson.apiClient import XmltojsonAPIClient
 # Enable debug mode
 api = XmltojsonAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<note>\n <to>Tove</to>\n <from>Jani</from>\n <heading>Reminder</heading>\n <body>Don't forget me this weekend!</body>\n</note>" }
+query = { "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<note>
+  <to>Tove</to>
+  <from>Jani</from>
+  <heading>Reminder</heading>
+  <body>Don't forget me this weekend!</body>
+</note>" }
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -239,8 +275,15 @@ from apiverve_xmltojson.apiClient import XmltojsonAPIClient
 
 api = XmltojsonAPIClient("[YOUR_API_KEY]")
 
+query = { "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<note>
+  <to>Tove</to>
+  <from>Jani</from>
+  <heading>Reminder</heading>
+  <body>Don't forget me this weekend!</body>
+</note>" }
+
 try:
-    query = { "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<note>\n <to>Tove</to>\n <from>Jani</from>\n <heading>Reminder</heading>\n <body>Don't forget me this weekend!</body>\n</note>" }
     result = api.execute(query)
     print(result)
 finally:
