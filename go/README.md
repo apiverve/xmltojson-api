@@ -51,7 +51,7 @@ func main() {
 
     // Set up parameters
     params := map[string]interface{}{
-        "xml": "<?xml version="1.0" encoding="UTF-8"?>
+        "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
 <note>
   <to>Tove</to>
   <from>Jani</from>
