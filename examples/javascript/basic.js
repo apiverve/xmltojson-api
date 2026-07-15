@@ -9,15 +9,22 @@ const API_KEY = process.env.APIVERVE_API_KEY || 'YOUR_API_KEY_HERE';
 const API_URL = 'https://api.apiverve.com/v1/xmltojson';
 
 /**
- * Make a GET request to the XML to JSON API
+ * Make a POST request to the XML to JSON API
  */
 async function callXMLtoJSONAPI() {
   try {
+    // Request body
+    const requestBody &#x3D; {
+    &quot;xml&quot;: &quot;&lt;?xml version&#x3D;\&quot;1.0\&quot; encoding&#x3D;\&quot;UTF-8\&quot;?&gt;\n&lt;note&gt;\n  &lt;to&gt;Tove&lt;/to&gt;\n  &lt;from&gt;Jani&lt;/from&gt;\n  &lt;heading&gt;Reminder&lt;/heading&gt;\n  &lt;body&gt;Don&#x27;t forget me this weekend!&lt;/body&gt;\n&lt;/note&gt;&quot;
+};
+
     const response = await fetch(API_URL, {
-      method: 'GET',
+      method: 'POST',
       headers: {
-        'x-api-key': API_KEY
-      }
+        'x-api-key': API_KEY,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(requestBody)
     });
 
     // Check if response is successful
