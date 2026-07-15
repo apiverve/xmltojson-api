@@ -14,14 +14,20 @@ API_URL = 'https://api.apiverve.com/v1/xmltojson'
 
 def call_xmltojson_api():
     """
-    Make a GET request to the XML to JSON API
+    Make a POST request to the XML to JSON API
     """
     try:
+        # Request body
+        request_body &#x3D; {
+    &#x27;xml&#x27;: &#x27;&lt;?xml version&#x3D;\&#x27;1.0\&#x27; encoding&#x3D;\&#x27;UTF-8\&#x27;?&gt;\n&lt;note&gt;\n  &lt;to&gt;Tove&lt;/to&gt;\n  &lt;from&gt;Jani&lt;/from&gt;\n  &lt;heading&gt;Reminder&lt;/heading&gt;\n  &lt;body&gt;Don&#x27;t forget me this weekend!&lt;/body&gt;\n&lt;/note&gt;&#x27;
+}
+
         headers = {
-            'x-api-key': API_KEY
+            'x-api-key': API_KEY,
+            'Content-Type': 'application/json'
         }
 
-        response = requests.get(API_URL, headers=headers)
+        response = requests.post(API_URL, headers=headers, json=request_body)
 
         # Raise exception for HTTP errors
         response.raise_for_status()
