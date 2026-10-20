@@ -1,13 +1,13 @@
-# [XML to JSON API](https://apiverve.com/marketplace/xmltojson?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [XML to JSON API](https://apiverve.com/marketplace/xmltojson?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-XML to JSON is a simple tool for converting XML to JSON. It returns the JSON representation of the XML provided.
+XML to JSON is an XML to JSON converter API that turns raw XML strings into structured JSON objects. Send any valid XML payload to receive an organized JSON tree preserving tags, attributes, and child elements.
 
 The XML to JSON API provides a simple, reliable way to integrate xml to json functionality into your applications. Built for developers who need production-ready xml to json capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://apiverve.com/marketplace/xmltojson?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/xmltojson?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/xmltojson?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/xmltojson?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-POST-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -167,7 +167,7 @@ go get github.com/apiverve/xmltojson-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [XML to JSON API](https://apiverve.com/marketplace/xmltojson?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [XML to JSON API](https://apiverve.com/marketplace/xmltojson?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/xmltojson](https://docs.apiverve.com/ref/xmltojson)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -197,11 +197,51 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the XML to JSON API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "note": {
+      "children": [
+        {
+          "to": {
+            "content": "Tove"
+          }
+        },
+        {
+          "from": {
+            "content": "Jani"
+          }
+        },
+        {
+          "heading": {
+            "content": "Reminder"
+          }
+        },
+        {
+          "body": {
+            "content": "Don't forget me this weekend!"
+          }
+        }
+      ]
+    }
+  }
 }
 ```
 
@@ -209,7 +249,7 @@ All responses are JSON with this structure:
 
 ## Support & Community
 
-- 🏠 **API Home**: [XML to JSON API](https://apiverve.com/marketplace/xmltojson?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [XML to JSON API](https://apiverve.com/marketplace/xmltojson?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)
