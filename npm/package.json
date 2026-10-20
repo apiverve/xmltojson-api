@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/xmltojson",
-  "version": "1.2.0",
-  "description": "XML to JSON is a simple tool for converting XML to JSON. It returns the JSON representation of the XML provided.",
+  "version": "1.2.2",
+  "description": "XML to JSON is an XML to JSON converter API that turns raw XML strings into structured JSON objects. Send any valid XML payload to receive an organized JSON tree preserving tags, attributes, and child elements.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
@@ -23,7 +23,7 @@
     "directory": "npm"
   },
   "keywords": [
-    "xml to json", "xml to json api", "xml to json tool", "xml to json software", "xml to json service"
+    "xml to json", "xml to json api", "convert xml to json", "change xml to json", "xml to json converter api"
   ],
   "author": {
     "name": "APIVerve",
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/xmltojson-api/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/xmltojson?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/xmltojson?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
