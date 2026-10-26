@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/xmltojson",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "XML to JSON is an XML to JSON converter API that turns raw XML strings into structured JSON objects. Send any valid XML payload to receive an organized JSON tree preserving tags, attributes, and child elements.",
   "main": "index.js",
   "types": "index.d.ts",
